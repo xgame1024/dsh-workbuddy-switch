@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-workbuddy-switch",
+    "description": "WorkBuddy (Tencent CodeBuddy) as a model provider: multi-account sign-in, a credit-first account pool, quota and daily check-in, streaming chat with tool calls and image input."
+  }
+}

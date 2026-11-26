@@ -1,0 +1,70 @@
+{
+  "name": "dsh-workbuddy-switch",
+  "version": "0.1.0",
+  "description": "WorkBuddy (Tencent CodeBuddy) model provider for DeepSeek Harness: multi-account token login, credit-first account pool, quota and daily check-in display, streaming chat completions, image input. Unofficial — not affiliated with, endorsed by, or authorised by Tencent.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*.js",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "xgame1024",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "workbuddy",
+    "codebuddy",
+    "llm-provider",
+    "openai-compatible"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xgame1024/dsh-workbuddy-switch.git"
+  },
+  "homepage": "https://github.com/xgame1024/dsh-workbuddy-switch#readme",
+  "bugs": {
+    "url": "https://github.com/xgame1024/dsh-workbuddy-switch/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-attachment": "*",
+    "@deepseek-ai/dsh-credentials": "*",
+    "@deepseek-ai/dsh-llm": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "scripts": {
+    "check": "node -e \"const{execFileSync}=require('node:child_process');const fs=require('node:fs');const files=fs.readdirSync('lib').filter((f)=>f.endsWith('.js'));for(const f of files)execFileSync(process.execPath,['--check','lib/'+f],{stdio:'inherit'});console.log('syntax ok:',files.length,'files')\""
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

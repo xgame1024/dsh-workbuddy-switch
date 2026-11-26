@@ -1,0 +1,10 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="dsh-workbuddy-switch">
+  <defs>
+    <linearGradient id="wb-s1" x1="5" y1="11" x2="31" y2="25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67C7FE" />
+      <stop offset="1" stop-color="#3F77D8" />
+    </linearGradient>
+  </defs>
+  <rect x="4.5" y="11" width="27" height="14" rx="7" fill="url(#wb-s1)" />
+  <circle cx="23.5" cy="18" r="4.4" fill="#FFFFFF" />
+</svg>

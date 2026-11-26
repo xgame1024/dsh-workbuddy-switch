@@ -1,0 +1,11 @@
+# dsh-workbuddy-switch bundle patch, applied after @deepseek-ai/dsh-base:
+# registers the WorkBuddy model provider (route `workbuddy`) and its account tools.
+#
+# User overrides belong in the profile's own cordis.patch.yml, addressed by row id:
+#   - id: llm-workbuddy
+#     config:
+#       realm: global
+#       models: [...]
+- insert:
+    - id: llm-workbuddy
+      name: 'dsh-workbuddy-switch'

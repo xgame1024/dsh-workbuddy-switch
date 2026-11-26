@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "dsh-workbuddy-switch",
+    "description": "把 WorkBuddy（腾讯 CodeBuddy）账户接入为模型提供方：多账号登录、按积分余额优先挑号的账号池、额度与每日签到展示，支持流式对话、工具调用与图片输入。"
+  }
+}
